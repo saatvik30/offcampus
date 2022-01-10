@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campusupdates",
+  "info": {
+    "singularName": "campusupdate",
+    "pluralName": "campusupdates",
+    "displayName": "campusupdates"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "link": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "categrories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categrory.categrory",
+      "inversedBy": "campusupdates"
+    }
+  }
+}
